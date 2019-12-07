@@ -16,29 +16,37 @@
 
 &emsp;&emsp;**[III. NHỮNG THỦ THUẬT CƠ BẢN](#III)**
 
-&emsp;&emsp;&emsp;**[3.1 Thao tác căn bản và những Package thông dụng](#3.1)**
+&emsp;&emsp;&emsp;**[3.1 Thao tác căn bản trong Sublime Text](#3.1)**
 
-&emsp;&emsp;&emsp;**[3.2 Thay đổi giao diện Sublime Text](#3.2)**
+&emsp;&emsp;&emsp;**[3.2 SidebarEnhancemments](#3.2)**
 
-&emsp;&emsp;&emsp;**[3.3 MarkdownPreview](#3.3)**
+&emsp;&emsp;&emsp;**[3.3 AutoFileName](#3.3)**
 
-&emsp;&emsp;&emsp;**[3.4 LiveReload](#3.4)**
+&emsp;&emsp;&emsp;**[3.4 ColorPicker](#3.4)**
 
-&emsp;&emsp;&emsp;**[3.5 Create Terminal using Sublime Text 3 in Kali Linux](#3.5)**
+&emsp;&emsp;&emsp;**[3.5 Color HighLighter](#3.5)**
 
-&emsp;&emsp;&emsp;**[3.6 Django Manage Commands](#3.6)**
+&emsp;&emsp;&emsp;**[3.6 Thay đổi giao diện Sublime Text](#3.6)**
 
-&emsp;&emsp;&emsp;**[3.7 Writing PEP 8 Python](#3.7)**
+&emsp;&emsp;&emsp;**[3.7 MarkdownPreview](#3.7)**
 
-&emsp;&emsp;&emsp;**[3.8 SublimeCodeIntel](#3.8)**
+&emsp;&emsp;&emsp;**[3.8 LiveReload](#3.8)**
 
-&emsp;&emsp;&emsp;**[3.9 Inline Python](#3.9)**
+&emsp;&emsp;&emsp;**[3.9 Create Terminal using Sublime Text 3 in Kali Linux](#3.9)**
 
-&emsp;&emsp;&emsp;**[3.10 File scss and sass convert to file css](#3.10)**
+&emsp;&emsp;&emsp;**[3.10 Django Manage Commands](#3.10)**
 
-&emsp;&emsp;&emsp;**[3.11 HTMLBeautify](#3.11)**
+&emsp;&emsp;&emsp;**[3.11 SublimeCodeIntel](#3.11)**
 
-&emsp;&emsp;&emsp;**[3.12 CSS Format](#3.12)**
+&emsp;&emsp;&emsp;**[3.12 Inline Python](#3.12)**
+
+&emsp;&emsp;&emsp;**[3.13 File scss and sass convert to file css](#3.13)**
+
+&emsp;&emsp;&emsp;**[3.14 HTMLBeautify](#3.14)**
+
+&emsp;&emsp;&emsp;**[3.15 CSS Format](#3.15)**
+
+&emsp;&emsp;&emsp;**[3.16 Python PEP8 Autoformat](#3.16)**
 
 &emsp;&emsp;**[IV. NGUỒN THAM KHẢO](#IV)**
 
@@ -148,62 +156,83 @@ sudo apt-get remove sublime-text
 
 <a name="3.1"></a>
 
-+ #### **[3.1 Thao tác căn bản và những Package thông dụng](#3.1)**	
++ #### **[3.1 Thao tác căn bản trong Sublime Text](#3.1)**	
 
-Sau khi cài đặt xong tiến hành cài gói Package Control, gói này để dùng cài đặt những gói package khác.
+    + **Install Package Control**
 
-Truy cập vào [đây](https://packagecontrol.io/installation#st3) để copy code tương ứng sublime text 3 hoặc 2. Hoặc:
+    Sau khi cài đặt xong tiến hành cài gói Package Control, gói này để dùng cài đặt những gói package khác.
 
-> copy Code:
+    Truy cập vào [đây](https://packagecontrol.io/installation#st3) để copy code tương ứng sublime text 3 hoặc 2. Hoặc:
 
-```
-import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) 
-```
+    > copy Code:
 
-Tổng hợp phím ```Ctrl + ~```, Pase vô và Enter
+    ```
+    import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) 
+    ```
 
-![control_01](./image/image_sublime/control_01.gif)
+    Tổng hợp phím ```Ctrl + ~```, Pase vô và Enter
 
-Tổng hợp phím ```Ctrl + Shift + P``` gõ install Enter, bắt đầu install những package hỗ trợ công việc
+    ![control_01](./image/image_sublime/control_01.gif)
 
-![control_02](./image/image_sublime/control_02.gif)
+    Tổng hợp phím ```Ctrl + Shift + P``` gõ install Enter, bắt đầu install những package hỗ trợ công việc
 
-+ **SidebarEnhancemments**
+    ![control_02](./image/image_sublime/control_02.gif)
 
-> Package này tạo ra các context menu với nhiều tiện ích tốt như open in brower
+    + **Remove Package**
+
+    > Để Remove một Package đã install ta làm sao
+
+    ![remove_package_01](./image/image_sublime/remove_package_01.gif)
+
+<a name="3.2"></a>
+
++ #### **[3.2 SidebarEnhancemments](#3.2)**
+
+> [Link tham khảo](https://github.com/titoBouzout/SideBarEnhancements#description)
+>
+> Package cung cấp tùy chỉnh khi nhấn chuột phải vào các thành phần đang hiển thị ở Sidebar bên trái, rất tiện lợi
 
 ![sidebar_01](./image/image_sublime/sidebar_01.gif)
 
-+ **AutoFileName**
+<a name="3.3"></a>
+
++ #### **[3.3 AutoFileName](#3.3)**
 
 > Package này sẽ hiển thị ra tất cả các file có trong thư mục để các bạn có thể nhúng file đơn giản hơn
+>
+> [Link hướng dẫn](https://packagecontrol.io/packages/AutoFileName), hoặc làm theo mẫu sau
 
 ![autofile_01](./image/image_sublime/autofilename_01.gif)
 
-+ **Color Picker**
+<a name="3.4"></a>
 
++ #### **[3.4 ColorPicker](#3.4)**
+
+> [Link tham khảo](https://github.com/weslly/ColorPicker/)
+>
 > Package này giúp cho chúng ta có thể lấy được mã màu mà không cần dùng đến photoshop.
-> Để mở chúng ta nhấn tổng hợp phím ```Ctrl + Shift + C```
 
 ![color_picker_01](./image/image_sublime/color_picker_01.gif)
 
-+ **Color HighLighter**
+> Để mở chúng ta nhấn tổng hợp phím ```Ctrl + Shift + C```
 
+<a name="3.5"></a>
+
++ #### **[3.5 Color HighLighter](#3.5)**
+
+> [Link tham khảo](https://github.com/Monnoroch/ColorHighlighter)
+>
 > Package này giúp bạn code css hay hơn bằng cách hiển thị luôn màu sắc của mã màu
 
 ![color_highlighter_01](./image/image_sublime/color_highlighter_01.gif)
 
-+ **Remove Package**
+<a name="3.6"></a>
 
-> Remove Package SidebarEnhancemments
++ #### **[3.6 Thay đổi giao diện Sublime Text](#3.6)**
 
-![remove_package_01](./image/image_sublime/remove_package_01.gif)
+[Link tham khảo](https://github.com/YabataDesign/afterglow-theme)
 
-<a name="3.2"></a>
-
-+ #### **[3.2 Thay đổi giao diện Sublime Text](#3.2)**
-
-Tham khảo bài viết tại [đây](https://ehkoo.com/bai-viet/sublime-text-3-themes), nhấn tổng hợp phím ```Ctrl + Shift + p``` gõ install rồi Enter, nhập vào tên theme cần cài đặt rồi Enter (Ví dụ: Theme Afterglow)
+Nhấn tổng hợp phím ```Ctrl + Shift + p``` gõ install rồi Enter, nhập vào tên theme cần cài đặt rồi Enter (Ví dụ: Theme Afterglow)
 
 ![theme_01](./image/image_sublime/theme_01.gif)
 
@@ -254,9 +283,9 @@ Settings for Afterglow-green
 
 ![theme_02](./image/image_sublime/theme_02.gif)
 
-<a name="3.3"></a>
+<a name="3.7"></a>
 
-+ #### **[3.3 MarkdownPreview](#3.3)**
++ #### **[3.7 MarkdownPreview](#3.7)**
 
 > Package MarkdownPreview hỗ trợ trong việc hiển thị nội dung bài viết tài liệu bằng **markdown**
 >
@@ -268,10 +297,12 @@ Settings for Afterglow-green
 
 ![markdown_preview_02](./image/image_sublime/markdown_preview_02.gif)
 
-<a name="3.4"></a>
+<a name="3.8"></a>
 
-+ #### **[3.4 LiveReload](#3.4)**
++ #### **[3.8 LiveReload](#3.8)**
 
+> [Link tham khảo](https://github.com/alepez/LiveReload-sublimetext3)
+>
 > Package LiveReload đi kèm với Package MarkdownPreview, để mỗi khi ***Save*** có thay đổi gì ở file markdown thì web Brower sẽ cập nhật mới
 >
 > Install package:
@@ -283,9 +314,10 @@ Settings for Afterglow-green
 > - Ctrl + Shift + P **-->** LiveReload: Enable/disable plug-ins **-->** Enable - Simple Reload
 
 ![live_reload_02](./image/image_sublime/live_reload_02.gif)
-<a name="3.5"></a>
 
-+ #### **[3.5 Create Terminal using Sublime Text 3 in Kali Linux](#3.5)**
+<a name="3.9"></a>
+
++ #### **[3.9 Create Terminal using Sublime Text 3 in Kali Linux](#3.9)**
 
 > Tạo Build system Terminal để chạy file python. Tools -> Build System -> New Build System, copy command dưới vào và đặt tên là python_terminal
 
@@ -299,11 +331,13 @@ Settings for Afterglow-green
 
 > Tool -> Build System -> python_terminal, hưởng thành quả đạt được thôi
 
-<a name="3.6"></a>
+<a name="3.10"></a>
 
-+ #### **[3.6 Django Manage Commands](#3.6)**
++ #### **[3.10 Django Manage Commands](#3.10)**
 
-> Package dùng để quản lý Django tìm hiểu thêm [tại đây](https://packagecontrol.io/packages/Django%20Manage%20Commands)
+> [Link tham khảo](https://github.com/vladimirnani/DjangoCommands)
+>
+> Package dùng để quản lý Django ***manage.py commands*** trong việc lập trình framework Django
 
 ![django_mange_command](./image/image_sublime/django_manage_commands.gif)
 
@@ -330,9 +364,90 @@ Settings for Afterglow-green
 >
 > Save lại
 
-<a name="3.7"></a>
+<a name="3.11"></a>
 
-+ #### **[3.7 Writing PEP 8 Python](#3.7)**
++ #### **[3.11 SublimeCodeIntel](#3.11)**
+
+> [Link tham khảo](https://github.com/SublimeCodeIntel/SublimeCodeIntel)
+>
+> Package hỗ trợ hiển thị các gợi ý ngay khi code về các function, class, biến, object, string,... 
+>
+> Phím trong Linux: Super + Click
+
+<a name="3.12"></a>
+
++ #### **[3.12 Inline Python](#3.12)**
+
+> [Link tham khảo](https://github.com/apiad/Sublime-InlinePython)
+>
+> Package này giúp code Python nhanh hơn, gợi ý function, class, model,...
+
+<a name="3.13"></a>
+
++ #### **[3.13 File scss and sass convert to file css](#3.13)**
+
+> [Link tham khảo](https://github.com/braver/SublimeSass)
+>
+> Trước tiên install Package SASS (trong Package SASS gồm cả SCSS), để Sublime Text hỗ trợ cú pháp
+>
+<!-- > OS Window yêu cầu: install [ruby](https://rubyinstaller.org/downloads/), ***ruby -v*** để kiểm tra phiên bản ruby (dùng ruby.7z, khi giải nén xong thiết lập trong $PATH ... ruby/bin) -->
+>
+<!-- > Mở ***cmd*** quyền Admin, install theo mẫu sau ```gem install sass``` -->
+> 
+
+![scss_sass_01](./image/image_sublime/scss_sass_01.gif)
+
+<!-- > Kiểm tra đã install ruby chưa ```ruby -v``` -->
+
+> [Link tham khảo](https://github.com/jaumefontal/SASS-Build-SublimeText2)
+>
+> Install package ***SASS Build***, dùng để convert sang file css
+>
+> - Để thiết lập build sang file css: Tools -> Build System -> SASS - Compressed
+
+![scss_sass_02](./image/image_sublime/scss_sass_02.gif)
+
+> - Để Build từ file scss và sass sang file css ***Ctrl + B***
+
+<a name="3.14"></a>
+
++ #### **[3.14 HTMLBeautify](#3.14)**
+
+> [Link tham khảo](https://github.com/rareyman/HTMLBeautify)
+>
+> Package hỗ trợ Format code file html để dễ nhìn
+>
+> Instal và sử dụng theo hướng dẫn sau
+>
+> Phím tắt trong Linux: ***Shift + Ctrl + Alt + F***
+
+![html_beautify_01](./image/image_sublime/html_beautify_01.gif)
+
+<a name="3.15"></a>
+
++ #### **[3.15 CSS Format](#3.15)**
+
+> [Link tham khảo](https://github.com/mutian/Sublime-CSS-Format)
+>
+> CSS Format là Package hỗ trợ Format file css theo nhiều chuẩn: Expanded, Compact, Compressed,... Chuẩn ***Expanded*** được dùng để khi code
+>
+> Phím tắt trong Linux: ***Ctrl + Shift + P*** -> Format CSS: XXX**
+
+![css_format_01](./image/image_sublime/css_format_01.gif)
+
+<a name="3.16"></a>
+
++ #### **[3.16 Python PEP8 Autoformat](#3.16)**
+
+> [Link tham khảo](https://packagecontrol.io/packages/Python%20PEP8%20Autoformat)
+>
+> Package hỗ trợ format những file Python theo chuẩn PEP8
+>
+> [Down load](https://bitbucket.org/StephaneBunel/pythonpep8autoformat/downloads/#tag-downloads) về, giải nén trong Folder ```~/sublime-text-3/Packages/``` của Sublime Text, đặt tên Folder mới giải nén là **Python PEP8 Autoformat**
+>
+> Phím tắt trong GNU/Linux: Ctrl + Shift + R
+
+**Hoặc làm theo cách khác**
 
 > Preferences -> Settings
 >
@@ -345,65 +460,6 @@ Settings for Afterglow-green
 > ```
 >
 > Copy và Pase
-
-<a name="3.8"></a>
-
-+ #### **[3.8 SublimeCodeIntel](#3.8)**
-
-> Package này giúp dễ dàng tìm ra các function, class,.. đang sử dụng được viết ra từ đâu
->
-> Phím trong Linux: Super + Click
-
-<a name="3.9"></a>
-
-+ #### **[3.9 Inline Python](#3.9)**
-
-> Package này giúp code Python nhanh hơn, gợi ý function, class, model,...
-
-<a name="3.10"></a>
-
-+ #### **[3.10 File scss and sass convert to file css](#3.10)**
-
-> Trước tiên install Package SASS (trong Package SASS gồm cả SCSS), để Sublime Text hỗ trợ cú pháp
->
-<!-- > OS Window yêu cầu: install [ruby](https://rubyinstaller.org/downloads/), ***ruby -v*** để kiểm tra phiên bản ruby (dùng ruby.7z, khi giải nén xong thiết lập trong $PATH ... ruby/bin) -->
->
-<!-- > Mở ***cmd*** quyền Admin, install theo mẫu sau ```gem install sass``` -->
-> 
-
-![scss_sass_01](./image/image_sublime/scss_sass_01.gif)
-
-<!-- > Kiểm tra đã install ruby chưa ```ruby -v``` -->
-
-> Install package ***SASS Build***, dùng để build sang file css
->
-> - Để thiết lập build sang file css: Tools -> Build System -> SASS - Compressed
-
-![scss_sass_02](./image/image_sublime/scss_sass_02.gif)
-
-> - Để Build từ file scss và sass sang file css ***Ctrl + B***
-
-<a name="3.11"></a>
-
-+ #### **[3.11 HTMLBeautify](#3.11)**
-
-> Package hỗ trợ Format code file html để dễ nhìn
->
-> Instal và sử dụng theo hướng dẫn sau
->
-> Phím tắt trong Linux: ***Shift + Ctrl + Alt + F***
-
-![html_beautify_01](./image/image_sublime/html_beautify_01.gif)
-
-<a name="3.12"></a>
-
-+ #### **[3.12 CSS Format](#3.12)**
-
-> CSS Format là Package hỗ trợ Format file css theo nhiều chuẩn: Expanded, Compact, Compressed,... Chuẩn ***Expanded*** được dùng để khi code
->
-> Phím tắt trong Linux: ***Ctrl + Shift + P*** -> Format CSS: XXX**
-
-![css_format_01](./image/image_sublime/css_format_01.gif)
 
 <br />
 <a name="IV"></a>
